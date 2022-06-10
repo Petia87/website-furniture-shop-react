@@ -1,43 +1,25 @@
-import React from 'react';
-import { FaBehance, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
-export const links = [
+const furnitureData = [
   {
     id: 1,
-    url: '/',
-    text: 'home',
-  },
-  {
-    id: 2,
-    url: '/about',
-    text: 'about',
-  },
-  {
-    id: 3,
-    url: '/projects',
-    text: 'product',
-  },
-  
-];
+    image: 'https://www.freeiconspng.com/uploads/aesthetic-chair-png-6.png',
+    h1: 'New collection',
+    h2: '2022',
 
-export const social = [
-  {
-    id: 1,
-    url: 'https://www.twitter.com',
-    icon: <FaFacebook />,
   },
   {
     id: 2,
-    url: 'https://www.twitter.com',
-    icon: <FaTwitter />,
+    image: 'https://www.nicepng.com/png/full/257-2575533_mistral-2-seat-sofa-g-plan-mistral-fabric.png',
+    h3: '-60%',
+    h4: 'OFF',
+    h5: 'all sofas'
   },
   {
     id: 3,
-    url: 'https://www.twitter.com',
-    icon: <FaLinkedin />,
+    image: 'https://www.freeiconspng.com/uploads/solid-wood-dining-room-furniture-27.png',
+    h3: '-40%',
+    h4: 'OFF',
+    h5: 'selected furniture'
   },
-  {
-    id: 4,
-    url: 'https://www.twitter.com',
-    icon: <FaBehance />,
-  },
+
 ];
+export default furnitureData ;
