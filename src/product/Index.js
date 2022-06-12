@@ -1,6 +1,10 @@
 import React from 'react'
-import {useFetch} from '../fetch/useFetch'
 import Product from './Product'
+import { useFetch } from '../fetch/useFetch'
+// import defaultImage from '../../../assets/default-image.jpeg';
+
+// ATTENTION!!!!!!!!!!
+// I SWITCHED TO PERMANENT DOMAIN
 const url = 'https://course-api.com/react-prop-types-example'
 
 const Index = () => {
