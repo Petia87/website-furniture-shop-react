@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi'
-
 import data from './data'
 function Slide() {
     const [furnitureData, setfurniture] = useState(data)
