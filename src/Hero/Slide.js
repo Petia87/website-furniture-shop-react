@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi'
-import data from './data'
+import dataf from '../data/dataf'
 function Slide() {
-    const [furnitureData, setfurniture] = useState(data)
+    const [furnitureData, SetfurnitureData] = useState(dataf)
     const [index, setIndex] = React.useState(0)
 
     const nextSlide = () => {
@@ -43,7 +43,7 @@ function Slide() {
         <section className='section'>
             <div className='section-center'>
                 {furnitureData.map((furniture, furnitureIndex) => {
-                    const { id, image, h1, h2, h3, h4, h5 } = furniture
+                    const { id, image, h1, h2, h3, h4, h5, name } = furniture
 
                     let position = 'nextSlide'
                     if (furnitureIndex === index) {
@@ -60,7 +60,7 @@ function Slide() {
                         <article className={position} key={id}>
                             <div className='container-slide'>
                                 <div className='container-slide-img'>
-                                    <img src={image} className='furn-img' />
+                                    <img src={image} alt={name} className='furn-img' />
                                 </div>
                                 <div className='container-slide-title'>
                                     <h1 className='slideh1'>{h1}</h1>

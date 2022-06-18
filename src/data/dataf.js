@@ -1,150 +1,28 @@
-const productsData = [
-    {
-      id: 'rec43w3ipXvP28vog',
-      company:'ikea',
-      price:'999',
-      name:'high-back bench',
-      url:'https://dl.airtable.com/.attachments/14ac9e946e1a02eb9ce7d632c83f742f/4fd98e64/product-1.jpeg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=17f00a82121ac00c',
-    },
-    {
-      id: 'rec43w3ipXvP28vo2',
-      company:'mobbo',
-      price:'7898',
-      name:'albany table',
-      url:'https://dl.airtable.com/.attachments/f3450755e165557344f7d6433242431e/93533098/product-1.jpeg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=078ed50e3a335209',
-    },
-    {
-      id: 'rec43w3ipXvP28vo3',
-      company:'mebeli mag',
-      price:'2500',
-      name:'accent chair',
-      url:'https://dl.airtable.com/.attachments/f292eaec4fea8a791b037c759ae559c9/2d5e34d5/product-4.jpeg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=ff80a08e35335a17',
-    },
-    {
-      id: 'rec43w3ipXvP28vo4',
-      company:'ikea',
-      price:'4500',
-      name:'wooden table',
-      url:'https://dl.airtable.com/.attachments/5b3ad76dfd6ca5e31810cb99141c7ede/69829b2f/pexels-dominika-roseclay-1139785.jpg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=51ab74075afce1ef',
-    },
-    {
-      id: 'rec43w3ipXvP28vo5',
-      company:'aiko',
-      price:'666',
-      name:'dining table',
-      url:'https://dl.airtable.com/.attachments/14ac9e946e1a02eb9ce7d632c83f742f/4fd98e64/product-1.jpeg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=17f00a82121ac00c',
-    },
-    {
-      id: 'rec43w3ipXvP28vog6',
-      company:'ikea',
-      price:'1000',
-      name:'sofa set',
-      url:'https://dl.airtable.com/.attachments/443aa7884207dae7c3cc127262a2f993/d4f33110/product-1.jpeg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=cf12e82167cfa72d',
-    },
-    {
-      id: 'rec43w3ipXvP28vog7',
-      company:'aiko',
-      price:'899',
-      name:'modern bookshelf',
-      url:'https://dl.airtable.com/.attachments/a889b1928b134c2ca0b5bbca32ea9abf/65c8a9a6/product-7.jpg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=fde577b4278d7ed2',
-    },
-    {
-      id: 'rec43w3ipXvP28vog8',
-      company:'ikea',
-      price:'2456',
-      name:'emperor bed',
-      url:'https://dl.airtable.com/.attachments/10fdf29ae17f2d1f98770ae42584d021/82b9403f/product-6.jpg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=f659d819a54d2a28',
-    },
-    {
-      id: 'rec43w3ipXvP28vog9',
-      company:'ikea',
-      price:'3999',
-      name:'utopia sofa',
-      url:'https://dl.airtable.com/.attachments/6ac7f7b55d505057317534722e5a9f03/9183491e/product-3.jpg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=1d7f28ba65ed2deb',
-    },
-    {
-      id: 'rec43w3ipXvP28vog10',
-      company:'ikea',
-      price:'2999',
-      name:'entertainment center',
-      url:'https://dl.airtable.com/.attachments/da5e17fd71f50578d525dd5f596e407e/d5e88ac8/product-2.jpg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=1ce7f07d70fe97db',
-    },
-    {
-      id: 'rec43w3ipXvP28vog11',
-      company:'ikea',
-      price:'999',
-      name:'albany sectional',
-      url:'https://dl.airtable.com/.attachments/05ecddf7ac8d581ecc3f7922415e7907/a4242abc/product-1.jpeg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=0e97e63de49b0b2b',
-    },
-    {
-      id: 'rec43w3ipXvP28vog12',
-      company:'ikea',
-      price:'999',
-      name:'high-back bench',
-      url:'https://dl.airtable.com/.attachments/14ac9e946e1a02eb9ce7d632c83f742f/4fd98e64/product-1.jpeg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=17f00a82121ac00c',
-    },
-    {
-      id: 'rec43w3ipXvP28vog13',
-      company:'ikea',
-      price:'1200',
-      name:'leather sofa',
-      url:'https://dl.airtable.com/.attachments/3245c726ee77d73702ba8c3310639727/f000842b/product-5.jpg?ts=1654909661&userId=usrQMwWEPx18KgLcP&cs=7e6771647856ed4d',
-    },
-    {
-      id: 'rec43w3ipXvP28vog14',
-      company:'ikea',
-      price:'777',
-      name:'sofa leather',
-      url:'https://toppng.com/uploads/preview/furniture-115635705623dfu57uerj.png',
-    },
-    {
-      id: 'rec43w3ipXvP28vog15',
-      company:'ikea',
-      price:'4500',
-      name:'black sofa',
-      url:'https://mpng.subpng.com/20180606/pkh/kisspng-table-sofa-bed-couch-garden-furniture-outdoor-sofa-5b18367f8bfd71.4468720415283134715734.jpg',
-    },
-    {
-      id: 'rec43w3ipXvP28vog16',
-      company:'ikea',
-      price:'1000',
-      name:'wooden bench',
-      url:'https://mpng.subpng.com/20180623/uj/kisspng-couch-table-furniture-wood-sofa-bed-how-to-build-outdoor-furniture-5b2ef023cef023.8946755515298027878476.jpg',
-    },
-    {
-      id: 'rec43w3ipXvP28vog17',
-      company:'ikea',
-      price:'3999',
-      name:'white sofa',
-      url:'https://mpng.subpng.com/20190707/esj/kisspng-coffee-tables-couch-sofa-bed-garden-furniture-chai-5d229b889f1b87.3429626315625491286517.jpg',
-    },
-    {
-      id: 'rec43w3ipXvP28vog18',
-      company:'ikea',
-      price:'1200',
-      name:'grey sofa',
-      url:'https://mpng.subpng.com/20180426/xle/kisspng-loveseat-table-chair-couch-garden-furniture-dry-cleaning-instructions-5ae15f55a33f84.1763307015247194456687.jpg',
-    },
-    {
-      id: 'rec43w3ipXvP28vog19',
-      company:'ikea',
-      price:'5999',
-      name:'grey white sofa',
-      url:'https://mpng.subpng.com/20180807/rvg/kisspng-table-chaise-longue-couch-garden-furniture-valencia-modular-corner-sofa-set-%E2%80%93-refil-sofa-5b69f397f41121.7108043115336702959997.jpg',
-    },
-    {
-      id: 'rec43w3ipXvP28vog20',
-      company:'ikea',
-      price:'3262',
-      name:'flower sofa',
-      url:'https://mpng.subpng.com/20180403/qqe/kisspng-couch-table-furniture-sofa-bed-chair-vintage-floral-5ac3e56f1c9132.526710761522787695117.jpg',
-    },
-    {
-      id: 'rec43w3ipXvP28vog21',
-      company:'ikea',
-      price:'899',
-      name:'blue bench',
-      url:'https://mpng.subpng.com/20180505/zqe/kisspng-daybed-table-couch-sofa-bed-garden-furniture-colored-rattan-5aedbb51e1d227.858939391525529425925.jpg',
-    },
-  ];
-  export default productsData;
+const furnitureData = [
+  {
+    id: 1,
+    image: 'https://www.freeiconspng.com/uploads/aesthetic-chair-png-6.png',
+    h1: 'New collection',
+    h2: '2022',
+    name:'img1'
+
+  },
+  {
+    id: 2,
+    image: 'https://www.nicepng.com/png/full/257-2575533_mistral-2-seat-sofa-g-plan-mistral-fabric.png',
+    h3: '-60%',
+    h4: 'OFF',
+    h5: 'all sofas',
+    name:'img2'
+  },
+  {
+    id: 3,
+    image: 'https://www.freeiconspng.com/uploads/solid-wood-dining-room-furniture-27.png',
+    h3: '-40%',
+    h4: 'OFF',
+    h5: 'selected furniture',
+    name:'img3'
+  },
+
+];
+export default furnitureData ;
